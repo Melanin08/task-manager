@@ -50,7 +50,7 @@ def add():
         'operation': 'addition'
     })
 
-@app . route ('/api/tasks', methods =[ 'POST'])
+@app . route ('/api/task', methods =[ 'POST'])
 def create_task () :
 # Get JSON data from request body
  data = request . get_json ()
@@ -69,7 +69,7 @@ def create_task () :
 # At the top of app .py , after imports
 tasks = [] # Global list to store tasks
 task_id_counter = 1 # To generate unique IDs
-@app . route ('/api/task', methods =['POST'])
+@app . route ('/api/tasks', methods =['POST'])
 def creates_task () :
  global task_id_counter
  data = request . get_json ()
@@ -83,7 +83,7 @@ def creates_task () :
  task_id_counter += 1
  return jsonify (new_task) , 201
 
-@app . route ('/api/task', methods =['GET'])
+@app . route ('/api/tasks', methods =['GET'])
 def get_tasks () :
  return jsonify ({
   'tasks': tasks ,
