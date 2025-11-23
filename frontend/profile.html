@@ -2,49 +2,23 @@
 <html>
 <head>
     <title>My Profile</title>
-
-    <style>
-
-        .profile-pic {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            display: block;
-            margin: 20px auto;
-            border: 3px solid #000;  /* Optional border */
-        }
-
-        body {
-            text-align: center; /* Center headings and layout */
-        }
-
-        table {
-            margin: auto;
-            width: 60%;
-            border-collapse: collapse;
-        }
-
-        table th, table td {
-            padding: 8px;
-        }
-    </style>
-
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-
-    <img src="c:\Users\Admin\Downloads\AYMAN_IMAGE.jpeg" alt="Ayman's Photo" class="profile-pic">
+    <img src="AYMAN_IMAGE.jpeg" alt="Ayman's Photo" class="profile-pic">
 
     <h1>Ayman Hamza Haji</h1>
 
     <h2>About Me</h2>
     <p>
-        My name is Ayman. I am 22 years old. I live at Jumbi. I am a third year student at IITM Zanzibar taking Digital Transformation 2 as my elective subject.
+        My name is Ayman. I am 22 years old. I live at Jumbi.
+        I am a third year student at IITM Zanzibar taking Digital Transformation 2 as my elective subject.
     </p>
 
     <h2>My Interests</h2>
-    <ul style="text-align: left; width: 50%; margin: auto;">
+    <ul class="list">
         <li>I like sleeping and listening to Qur-an.</li>
         <li>I want to be a creative woman.</li>
         <li>I like going on trips.</li>
@@ -53,7 +27,7 @@
     </ul>
 
     <h2>My Skills</h2>
-    <table border="1">
+    <table>
         <tr>
             <th>Skill</th>
             <th>Level</th>
@@ -82,11 +56,23 @@
 
     <h2>Contact Me</h2>
     <form>
-        <input type="text" placeholder="Your Name"><br><br>
-        <input type="email" placeholder="Your Email"><br><br>
-        <textarea placeholder="Message"></textarea><br><br>
-        <button type="submit">Send</button>
+        <input type="text" placeholder="Your Name" class="input-box"><br><br>
+        <input type="email" placeholder="Your Email" class="input-box"><br><br>
+        <textarea placeholder="Message" class="input-box"></textarea><br><br>
+        <button type="submit" class="btn">Send</button>
     </form>
+
+<h2>Interactive Section</h2>
+
+<!--Dark Mode Button -->
+<button onclick="toggleTheme()">Toggle Dark Mode</button>
+
+<!-- Click Counter -->
+<p id="clickCount">Clicks: 0</p>
+<button onclick="countClicks()">Click Me!</button>
+
+<! -- Link JavaScript file -->
+<script src="script.js"></script>
 
 </body>
 </html>
